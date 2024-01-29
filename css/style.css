@@ -1,0 +1,84 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: Muller;
+  background-color: #F1F1F1;
+}
+
+ul{
+  list-style: none;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1170px;
+}
+
+.header__top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header__tel{
+  padding-left: 40px;
+}
+
+.header__account{
+  background-image: url("../img/account-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+  padding-left: 29px;
+  margin-left: 550px;
+}
+
+.header__buttom{
+  border-radius: 15px;
+  background: #FFF;
+}
+
+.header__list{
+  display: flex;
+  margin: 0;
+}
+
+.header__btn-tour{
+  border-radius: 10px;
+  border: 1px solid #C93;
+  padding: 13px 20px;
+  background-color: transparent;
+  color: #CC9933;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.header__btn-call{
+  color: #CC9933;
+  padding: 13px 20px;
+  border-radius: 10px;
+  border: 1px solid #C93;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
