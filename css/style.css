@@ -22,14 +22,20 @@ body {
   background-color: #F1F1F1;
 }
 
-ul{
+.list-resert{
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.header{
+  padding: 30px 0 70px;
 }
 
 .container{
   margin: 0 auto;
-  padding: 30px 0;
-  width: 1170px;
+  padding: 0 10px;
+  max-width: 1170px;
 }
 
 .header__top{
@@ -39,14 +45,13 @@ ul{
 }
 
 .header__tel{
-  padding-left: 40px;
+  margin-left: 40px;
 }
 
 .header__account{
   background-image: url("../img/account-arrow.svg");
   background-repeat: no-repeat;
   background-position: left;
-  cursor: pointer;
   padding-left: 29px;
   margin-left: 550px;
 }
@@ -57,14 +62,33 @@ ul{
 }
 
 .header__list{
-  display: flex;
+  display: inline-flex;
   margin: 0;
+  padding: 27px 0 27px 45px;
 }
 
-.header__btn-tour{
+.header__item{
+  margin-right: 45px;
+}
+
+.header__item:last-child{
+  margin-right: 0;
+}
+
+.header__btn{
+  display: inline-flex;
+  font-size: 0;
+  padding: 14px 45px 14px 114px;
+}
+
+.header__btn-list:first-child{
+  margin-right: 40px;
+}
+
+.header__btn-item{
+  padding: 13px 20px;
   border-radius: 10px;
   border: 1px solid #C93;
-  padding: 13px 20px;
   background-color: transparent;
   color: #CC9933;
   font-size: 16px;
@@ -72,15 +96,73 @@ ul{
   line-height: 16px;
 }
 
-.header__btn-call{
-  color: #CC9933;
-  padding: 13px 20px;
-  border-radius: 10px;
-  border: 1px solid #C93;
-  background-color: transparent;
+
+/* -------------offers-------------*/
+
+.title{
+  margin: 0;
+  padding-left: 40px;
+  color: #333;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.offers__list-item{
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.offers__item-link{
+  color: #F0BF5F;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
 }
 
+.item-1{
+  background-image: url("../img/item-1.jpg");
+}
 
+.item-2{
+  background-image: url("../img/item-2.jpg");
+}
+
+.item-3{
+  background-image: url("../img/item-3.jpg");
+}
+
+.offers__item-title{
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+.offers__item-title--big{
+  color: #FFF;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 180px;
+}
+
+.offers__item-price{
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.offers__item-price--big{
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.offers__item-link{
+  background-image: url("../img/offers-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+}
