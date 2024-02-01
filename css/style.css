@@ -108,6 +108,10 @@ body {
   line-height: 40px;
 }
 
+.offers{
+  margin-bottom: 70px;
+}
+
 .offers__list-item{
   display: inline-block;
   background-repeat: no-repeat;
@@ -166,3 +170,12 @@ body {
   background-position: right;
   padding-right: 20px;
 }
+
+
+/* -------------about-------------*/
+
+.about{
+  margin-bottom: 70px;
+}
+
+/* -------------services-------------*/
