@@ -102,6 +102,7 @@ body {
 .title{
   margin: 0;
   padding-left: 40px;
+  margin-bottom: 20px;
   color: #333;
   font-size: 40px;
   font-weight: 400;
@@ -124,16 +125,16 @@ body {
   line-height: 16px;
 }
 
-.item-1{
-  background-image: url("../img/item-1.jpg");
+.offers__item-1{
+  background-image: url("../img/offers__item-1.jpg");
 }
 
-.item-2{
-  background-image: url("../img/item-2.jpg");
+.offers__item-2{
+  background-image: url("../img/offers__item-2.jpg");
 }
 
-.item-3{
-  background-image: url("../img/item-3.jpg");
+.offers__item-3{
+  background-image: url("../img/offers__item-3.jpg");
 }
 
 .offers__item-title{
@@ -179,3 +180,63 @@ body {
 }
 
 /* -------------services-------------*/
+
+.services{
+  margin-bottom: 70px;
+}
+
+.services__list-item{
+  display: inline-block;
+  vertical-align: top;
+  width: 573px;
+  height: 330px;
+  padding: 191px 45px 35px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.services__list-item:nth-child(even){
+  margin-right: 0;
+}
+
+.modules__card:nth-last-child(-n+2){
+  margin-bottom: 0;
+}
+
+.services__item-1{
+  background-image: url("../img/services__item-1.jpg");
+}
+
+.services__item-2{
+  background-image: url("../img/services__item-2.jpg");
+}
+
+.services__item-3{
+  background-image: url("../img/services__item-3.jpg");
+}
+
+.services__item-4{
+  background-image: url("../img/services__item-4.jpg");
+}
+
+.services__list-link{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #CC9933;
+  background-image: url("../img/offers-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+}
+
+.services__list-text{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
