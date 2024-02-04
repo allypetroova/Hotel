@@ -337,3 +337,14 @@ body {
   background-image: url("../img/advantage__item-8.svg");
 }
 
+/* -------------placement-------------*/
+
+.placement{
+  margin-bottom: 70px;
+}
+
+.placement__list-item{
+  display: inline-block;
+  width: 374px;
+  height: 440px;
+}
