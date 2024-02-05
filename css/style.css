@@ -343,8 +343,52 @@ body {
   margin-bottom: 70px;
 }
 
-.placement__list-item{
+.placement__item{
   display: inline-block;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 16px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.placement__wrapper{
+  padding: 32px 45px 45px;
+}
+
+.placement__price{
+  display: inline-block;
+  width: 138px;
+}
+
+.placement__list-item{
   width: 374px;
   height: 440px;
+}
+
+.placement__price-1{
+  color: #999999;
+}
+
+.placement__price-2{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.placement__description{
+  margin-bottom: 20px;
+}
+
+.placement__country{
+  color: #999999;
+}
+
+.placement__btn{
+  padding: 13px 20px;
+  color: #CC9933;
+  background-color: transparent;
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+  cursor: pointer;
 }
