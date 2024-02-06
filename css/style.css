@@ -118,7 +118,8 @@ body {
 }
 
 .offers__list-item{
-  display: inline-block;
+  width: 573px;
+  height: 258px;
   background-repeat: no-repeat;
   padding: 40px 108px 40px 45px;
   border-radius: 15px;
@@ -136,7 +137,8 @@ body {
 }
 
 .offers__item-2{
-  width: 50%;
+  padding: 212px 229px 40px 45px;
+  height: 540px;
   background-image: url("../img/offers__item-2.jpg");
 }
 
@@ -146,23 +148,25 @@ body {
 
 .offers__item-title{
   margin: 0;
+  padding-bottom: 15px;
   color: #FFF;
   font-size: 40px;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 40px;
 }
 
 .offers__item-title--big{
   margin: 0;
+  padding-bottom: 15px;
   color: #FFF;
   font-size: 60px;
   font-weight: 700;
-  line-height: 180px;
+  line-height: 60px;
 }
 
 .offers__item-price{
   margin: 0;
-  padding: 15px 0 47px;
+  padding-bottom: 47px;
   color: #FFF;
   font-size: 20px;
   font-weight: 400;
@@ -171,6 +175,7 @@ body {
 
 .offers__item-price--big{
   margin: 0;
+  padding-bottom: 47px;
   color: #FFF;
   font-size: 30px;
   font-weight: 400;
