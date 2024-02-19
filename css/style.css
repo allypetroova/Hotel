@@ -29,8 +29,10 @@ body {
 }
 
 .header{
-  padding-top: 30px;
-  margin-bottom: 70px;
+  padding: 30px 0 70px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 .container{
@@ -40,12 +42,21 @@ body {
 
 .header__top{
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.header__tel{
-  margin-left: 40px;
+.header__top-main{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.header__top-tel{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .header__account{
@@ -53,56 +64,41 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   padding-left: 29px;
-  margin-left: 550px;
+  color: #CC9933;
 }
 
 .header__buttom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 45px;
   border-radius: 15px;
   background: #FFF;
 }
 
 .header__list{
-  display: inline-flex;
-  margin: 0;
-  padding: 27px 0 27px 45px;
+  display: flex;
+  gap: 45px;
 }
 
-.header__item{
-  margin-right: 45px;
-}
-
-.header__item:last-child{
-  margin-right: 0;
+.header__buttons{
+  display: flex;
+  gap: 40px;
 }
 
 .header__btn{
-  display: inline-flex;
-  font-size: 0;
-  padding: 14px 45px 14px 114px;
-}
-
-.header__btn-list:first-child{
-  margin-right: 40px;
-}
-
-.header__btn-item{
   padding: 13px 20px;
   border-radius: 10px;
   border: 1px solid #C93;
   background-color: transparent;
   color: #CC9933;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
+  cursor: pointer;
 }
-
 
 /* -------------offers-------------*/
 
 .title{
-  margin: 0;
-  padding-left: 40px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 40px;
   color: #333;
   font-size: 40px;
   font-weight: 400;
@@ -110,26 +106,24 @@ body {
 }
 
 .offers{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .offers__list{
-  font-size: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+}
+
+.offers__list-item:nth-child(2){
+  grid-row: span 2;
 }
 
 .offers__list-item{
-  width: 573px;
-  height: 258px;
   background-repeat: no-repeat;
   padding: 40px 108px 40px 45px;
   border-radius: 15px;
-}
-
-.offers__item-link{
-  color: #F0BF5F;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
 }
 
 .offers__item-1{
@@ -138,7 +132,6 @@ body {
 
 .offers__item-2{
   padding: 212px 229px 40px 45px;
-  height: 540px;
   background-image: url("../img/offers__item-2.jpg");
 }
 
@@ -148,7 +141,7 @@ body {
 
 .offers__item-title{
   margin: 0;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   color: #FFF;
   font-size: 40px;
   font-weight: 700;
@@ -157,7 +150,7 @@ body {
 
 .offers__item-title--big{
   margin: 0;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   color: #FFF;
   font-size: 60px;
   font-weight: 700;
@@ -166,19 +159,17 @@ body {
 
 .offers__item-price{
   margin: 0;
-  padding-bottom: 47px;
+  margin-bottom: 47px;
   color: #FFF;
   font-size: 20px;
-  font-weight: 400;
   line-height: 20px;
 }
 
 .offers__item-price--big{
   margin: 0;
-  padding-bottom: 47px;
+  margin-bottom: 47px;
   color: #FFF;
   font-size: 30px;
-  font-weight: 400;
   line-height: 30px;
 }
 
@@ -187,13 +178,16 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   padding-right: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #F0BF5F;
 }
 
 
 /* -------------about-------------*/
 
 .about{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .about__text{
@@ -207,7 +201,7 @@ body {
 /* -------------services-------------*/
 
 .services{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .services__list{
@@ -218,7 +212,6 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 573px;
-  height: 330px;
   margin-bottom: 24px;
   margin-right: 24px;
   padding: 191px 45px 35px;
@@ -253,18 +246,19 @@ body {
 }
 
 .services__list-link{
+  padding-right: 20px;
+  background-image: url("../img/offers-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
   font-size: 20px;
   font-weight: 500;
   line-height: 40px;
   color: #CC9933;
-  background-image: url("../img/offers-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 20px;
 }
 
 .services__list-text{
   margin: 0;
+  max-width: 402px;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -273,7 +267,7 @@ body {
 /* -------------advantage-------------*/
 
 .advantage{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .advantage__list{
@@ -284,7 +278,6 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 276px;
-  height: 276px;
   margin-bottom: 22px;
   margin-right: 22px;
   padding: 116px 42px 32px 45px;
@@ -301,7 +294,6 @@ body {
 .advantage__list-item:nth-last-child(-n+4){
   margin-bottom: 0;
 }
-
 
 .advantage__list-text{
   margin: 0;
@@ -345,30 +337,28 @@ body {
 /* -------------placement-------------*/
 
 .placement{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .placement__cards{
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .card__photo{
   height: 217px;
-  margin: 0;
 }
 
 .card__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 20px;
-}
-
-.card__hotel {
-  margin: 0;
 }
 
 .card__box{
+  width: 374px;
   height: 223px;
   padding: 32px 45px 45px;
   background-color: #fff;
@@ -378,10 +368,16 @@ body {
   line-height: 16px;
 }
 
+.card__desc{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .card__prices{
   margin: 0;
   display: flex;
-  flex-direction: row;
   gap: 4px;
   align-items: baseline;
 }
@@ -394,6 +390,10 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
+}
+
+.card__hotel {
+  margin: 0;
 }
 
 .card____country{
@@ -410,14 +410,20 @@ body {
   cursor: pointer;
 }
 
-.card__btn:hover{
-  color: #FFFFFF;
-  background-color: #CC9933;
+.card__link{
+  padding: 373px 54px 27px;
+  background-image: url(../img/card__link.png);
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-.card__desc{
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.card__link-item{
+  padding-right: 20px;
+  background-image: url(../img/card-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
 }
