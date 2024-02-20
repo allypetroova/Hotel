@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller Hairline'), local('Muller-Hairline'),
+      url('MullerHairline.woff2') format('woff2'),
+      url('MullerHairline.woff') format('woff'),
+      url('MullerHairline.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -18,7 +28,7 @@ img {
 }
 
 body {
-	font-family: Muller;
+	font-family: 'Muller', sans-serif;
   background-color: #F1F1F1;
 }
 
@@ -351,6 +361,10 @@ body {
   height: 217px;
 }
 
+.card__photo-img{
+  border-radius: 15px 15px 0 0;
+}
+
 .card__top {
   display: flex;
   justify-content: space-between;
@@ -412,8 +426,9 @@ body {
 
 .card__link{
   padding: 373px 54px 27px;
-  background-image: url(../img/card__link.png);
+  background-image: url(../img/card__link.jpg);
   background-repeat: no-repeat;
+  border-radius: 15px;
   text-align: center;
 }
 
