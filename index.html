@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-
   <header class="header">
     <h1 class="hidden">Бронирование ноеров в отеле Lagoona</h1>
     <div class="container">
@@ -17,7 +16,7 @@
       <div class="header__top">
         <div class="header__top-main">
           <a class="header__logo" href="index.html">
-            <img src="img/logo.png" alt="Логотип">
+            <img class="header__logo-img" src="img/logo.png" alt="Логотип">
           </a>
           <a class="header__top-tel" href="tel:74953225448">+7&nbsp;495 322-54-48</a>
         </div>
@@ -50,8 +49,8 @@
         </nav>
 
         <div class="header__buttons">
-          <a class="header__btn header__btn-tour" href="#">Хочу тур</a>
-          <button class="header__btn">Обратный звонок</button>
+          <a class="header__btn-tour btn" href="#">Хочу тур</a>
+          <button class="btn">Обратный звонок</button>
         </div>
 
       </div>
@@ -68,14 +67,14 @@
 
           <div class="offers__list">
             <div class="offers__list-item offers__item-1">
-              <h3 class="offers__item-title subtitle">Мальдивские острова</h3>
-              <span class="offers__item-price">от&nbsp;55&nbsp;000</span>
-              <a class="offers__item-link" href="#">Подробнее</a>
+              <h3 class="offers__item-title offers__item-title--small subtitle">Мальдивские острова</h3>
+              <span class="offers__item-price offers__item-price--small">от&nbsp;55&nbsp;000</span>
+              <a class="offers__item-link more-link" href="#">Подробнее</a>
             </div>
             <div class="offers__list-item offers__item-2">
-              <h3 class="offers__item-title subtitle">Горящий тур на&nbsp;остров Крит</h3>
-              <span class="offers__item-price">от&nbsp;30&nbsp;000</span>
-              <a class="offers__item-link" href="#">Подробнее</a>
+              <h3 class="offers__item-title offers__item-title--small subtitle">Горящий тур на&nbsp;остров Крит</h3>
+              <span class="offers__item-price offers__item-price--small">от&nbsp;30&nbsp;000</span>
+              <a class="offers__item-link more-link" href="#">Подробнее</a>
             </div>
           </div>
 
@@ -83,7 +82,7 @@
             <div class="offers__list-item offers__item-3">
               <h3 class="offers__item-title offers__item-title--big subtitle">Номера категории люкс</h3>
               <span class="offers__item-price offers__item-price--big">от&nbsp;5&nbsp;000</span>
-              <a class="offers__item-link" href="#">Подробнее</a>
+              <a class="offers__item-link more-link" href="#">Подробнее</a>
             </div>
           </div>
         </div>
@@ -104,7 +103,7 @@
         <h2 class="title">Услуги</h2>
         <ul class="services__list list-resert">
           <li class="services__list-item services__item-1">
-            <h3 class="services__list-link subtitle">
+            <h3 class="services__list-link more-link subtitle">
               <a href="#">
                 Эксклюзивное обслуживание
               </a>
@@ -114,7 +113,7 @@
             </p>
           </li>
           <li class="services__list-item services__item-2">
-            <h3 class="services__list-link subtitle">
+            <h3 class="services__list-link more-link subtitle">
               <a href="#">
                 Аренда банкетных залов
               </a>
@@ -124,7 +123,7 @@
             </p>
           </li>
           <li class="services__list-item services__item-3">
-            <h3 class="services__list-link subtitle">
+            <h3 class="services__list-link more-link subtitle">
               <a href="#">
                 Сауны, бассейны, бани, фитнес-залы
               </a>
@@ -134,7 +133,7 @@
             </p>
           </li>
           <li class="services__list-item services__item-4">
-            <h3 class="services__list-link subtitle">
+            <h3 class="services__list-link more-link subtitle">
               <a href="#">
                 Охраняемые автомобильные стоянки
               </a>
@@ -219,7 +218,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona espa&ntilde;ola</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -244,7 +243,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona son t&iacute;picas</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -269,7 +268,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona de&nbsp;la&nbsp;guerra</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -294,7 +293,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona mentira piadosa</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -319,7 +318,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona empujar la&nbsp;creatividad</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -344,7 +343,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona el&nbsp;retorno</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -369,7 +368,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona mentira piadosa</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
@@ -394,7 +393,7 @@
                 </div>
                 <h3 class="card__hotel subtitle">Lagoona suerte sigui&oacute; siempre</h3>
                 <span class="card___country">Барселона, Испания</span>
-                <a class="card__btn" href="#">Номера</a>
+                <a class="card__btn btn" href="#">Номера</a>
               </div>
             </article>
           </li>
