@@ -63,25 +63,13 @@ img{
   padding: 0 15px;
 }
 
-.section{
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-
 .title{
   margin: 0;
   margin-bottom: 20px;
   text-indent: 40px;
   font-size: 40px;
+  font-weight: 400;
   color: #333333;
-}
-
-.subtitle{
-  margin: 0;
-}
-
-.text{
-  margin: 0
 }
 
 .list-resert{
@@ -97,13 +85,6 @@ img{
   border: 1px solid #CC9933;
   border-radius: 10px;
   background-color: #FFFFFF;
-}
-
-.more-link{
-  padding-right: 16px;
-  background-image: url('../img/arrow.svg');
-  background-position: right;
-  background-repeat: no-repeat;
 }
 
 /* -----------Header----------- */
@@ -188,6 +169,11 @@ img{
 
 /* -----------Offers Section----------- */
 
+.offers{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 .offers__wrapper{
   display: flex;
   min-height: 540px;
@@ -222,28 +208,26 @@ img{
   margin-bottom: 0;
 }
 
-.offers__item-1{
+.offers__list-item--img-maldives{
   background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
     url('../img/offers__item-1.jpg');
 }
 
-.offers__item-2{
+.offers__list-item--img-tour{
   background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
     url('../img/offers__item-2.jpg');
 }
 
-.offers__item-3{
+.offers__list-item--img-rooms{
   background-image: url('../img/offers__item-3.jpg');
 }
 
 .offers__item-title{
+  margin: 0;
   margin-bottom: 15px;
+  font-size: 40px;
   font-weight: 700;
   color: #FFFFFF;
-}
-
-.offers__item-title--small{
-  font-size: 40px;
 }
 
 .offers__item-title--big{
@@ -252,12 +236,9 @@ img{
 
 .offers__item-price{
   margin-bottom: 47px;
+  font-size: 20px;
   color: #FFFFFF;
   opacity: 0.8;
-}
-
-.offers__item-price--small{
-  font-size: 20px;
 }
 
 .offers__item-price--big{
@@ -265,13 +246,23 @@ img{
 }
 
 .offers__item-link{
+  padding-right: 16px;
   font-size: 16px;
   color: #F0BF5F;
+  background-image: url('../img/arrow.svg');
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 /* -----------About Section----------- */
 
+.about{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 .about__text{
+  margin: 0;
   max-width: 888px;
   font-size: 16px;
   line-height: 200%;
@@ -279,6 +270,11 @@ img{
 }
 
 /* -----------Services Section----------- */
+
+.services{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 
 .services__list{
   display: flex;
@@ -305,37 +301,48 @@ img{
   margin-bottom: 0;
 }
 
-.services__item-1{
-  background-image: url('../img/services__item-1.jpg');
+.services__list-item--service{
+  background-image: url('../img/services__service.jpg');
 }
 
-.services__item-2{
-  background-image: url('../img/services__item-2.jpg');
+.services__list-item--rent{
+  background-image: url('../img/services__rent.jpg');
 }
 
-.services__item-3{
-  background-image: url('../img/services__item-3.jpg');
+.services__list-item--pool{
+  background-image: url('../img/services__pool.jpg');
 }
 
-.services__item-4{
-  background-image: url('../img/services__item-4.jpg');
+.services__list-item--parking{
+  background-image: url('../img/services__parking.jpg');
 }
 
 .services__list-link{
+  margin: 0;
   display: inline-block;
+  padding-right: 16px;
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
   color: #CC9933;
+  background-image: url('../img/arrow.svg');
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .services__list-text{
+  margin: 0;
   font-size: 16px;
   line-height: 200%;
   color: #000000;
 }
 
 /* -----------Advantage Section----------- */
+
+.advantage{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 
 .advantage__list{
   display: flex;
@@ -361,45 +368,51 @@ img{
   margin-bottom: 0;
 }
 
-.advantage__item-1{
-  background-image: url('../img/advantage__item-1.svg');
+.advantage__list-item--bath{
+  background-image: url('../img/advantage__bath.svg');
 }
 
-.advantage__item-2{
-  background-image: url('../img/advantage__item-2.svg');
+.advantage__list-item--towel{
+  background-image: url('../img/advantage__towel.svg');
 }
 
-.advantage__item-3{
-  background-image: url('../img/advantage__item-3.svg');
+.advantage__list-item--heating{
+  background-image: url('../img/advantage__heating.svg');
 }
 
-.advantage__item-4{
-  background-image: url('../img/advantage__item-4.svg');
+.advantage__list-item--key{
+  background-image: url('../img/advantage__key.svg');
 }
 
-.advantage__item-5{
-  background-image: url('../img/advantage__item-5.svg');
+.advantage__list-item--parking{
+  background-image: url('../img/advantage__parking.svg');
 }
 
-.advantage__item-6{
-  background-image: url('../img/advantage__item-6.svg');
+.advantage__list-item--bell{
+  background-image: url('../img/advantage__bell.svg');
 }
 
-.advantage__item-7{
-  background-image: url('../img/advantage__item-7.svg');
+.advantage__list-item--safe{
+  background-image: url('../img/advantage__safe.svg');
 }
 
-.advantage__item-8{
-  background-image: url('../img/advantage__item-8.svg');
+.advantage__list-item--pool{
+  background-image: url('../img/advantage__pool.svg');
 }
 
 .advantage__list-text{
+  margin: 0;
   font-size: 16px;
   line-height: 200%;
   color: #000000;
 }
 
 /* -----------Placement Section----------- */
+
+.placement{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 
 .placement__cards{
   display: flex;
@@ -482,8 +495,10 @@ img{
 }
 
 .card__hotel{
+  margin: 0;
   margin-bottom: 16px;
   font-size: 16px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -494,11 +509,10 @@ img{
 }
 
 .card__btn{
-  padding: 13px 20px;
   max-width: 100px;
 }
 
-.card__link{
+.card--link{
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -511,7 +525,7 @@ img{
   background-size: cover;
 }
 
-.card__link-item{
+.card--link-item{
   padding-right: 16px;
   font-size: 20px;
   font-weight: 500;
