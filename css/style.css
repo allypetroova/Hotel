@@ -546,13 +546,13 @@ img{
 }
 
 .tour_wrapper{
-  padding: 45px 45px 45px 40px;
+  padding: 45px;
   background-color: #E9E9E9;
   border-radius: 15px;
 }
 
 .title--tour{
-  text-indent: 0;
+  text-indent: -5px;
 }
 
 .tour__form{
@@ -573,11 +573,16 @@ img{
 .tour__form-item{
   display: flex;
   flex-direction: column;
-  margin-right: 41px;
 }
 
-.tour__form-item:last-of-type{
-  margin-right: 0;
+.tour__form-item--list{
+  max-width: 169px;
+  width: 100%;
+}
+
+.tour__form-item--opt{
+  max-width: 121px;
+  width: 100%;
 }
 
 .tour__form-title{
@@ -588,8 +593,6 @@ img{
 }
 
 .tour__form-select{
-  min-width: 170px;
-  padding-right: 36px;
   appearance: none;
   border: none;
   background: url('../img/form__select-arrow.svg') no-repeat right;
@@ -627,21 +630,24 @@ img{
   border-radius: 15px;
 }
 
+.contacts-address{
+  margin-bottom: 45px;
+  width: 100%;
+}
+
 .contacts__content{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-}
-
-.contacts__list{
   max-width: 375px;
+  width: 100%;
 }
 
 .contacts__list-item{
   margin-bottom: 25px;
   padding-bottom: 23px;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #E9E9E9;
 }
 
@@ -650,10 +656,7 @@ img{
 }
 
 .contacts__list-title{
-  margin: 0;
-  margin-right: 47px;
-  width: 100%;
-  max-width: 98px;
+  font-style: normal;
   font-size: 20px;
   font-weight: 700;
   color: #000000;
@@ -661,32 +664,34 @@ img{
 
 .contacts__list-text{
   margin: 0;
-  width: 100%;
-  max-width: 230px;
+  font-style: normal;
   font-size: 16px;
   line-height: 150%;
   color: #000000;
 }
 
-.contacts__list-roster{
+.contacts__list--width{
+  max-width: 229px;
   width: 100%;
 }
 
-.contacts__list-roster-item--email{
-  margin-bottom: 3px;
+.contacts__list-roster{
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__list-roster-link{
   font-size: 16px;
   line-height: 150%;
   color: #CC9933;
+  font-style: normal;
 }
 
 .contacts__list-roster-span{
-  display: inline-block;
   font-size: 16px;
   line-height: 150%;
   color: #999999;
+  font-style: normal;
 }
 
 .contacts__list-btn{
@@ -714,7 +719,7 @@ img{
   border-radius: 15px;
   background-image: url('../img/footer__bg.svg');
   background-repeat: no-repeat;
-  background-position: 75% 100%;
+  background-position: right 176px bottom;
 }
 
 .footer__info{
@@ -722,7 +727,7 @@ img{
 }
 
 .footer__info-about {
-  margin: 0;
+  display: inline-block;
   margin-bottom: 37px;
   font-size: 16px;
   line-height: 190%;
@@ -745,11 +750,12 @@ img{
 
 .footer__contacts {
   flex-basis: 50%;
+  font-style: normal;
 }
 
 .footer__contact-adress{
   margin: 0;
-  font-style: normal;
+  margin-bottom: 15px;
   font-size: 16px;
   font-weight: 400;
   line-height: 187%;
@@ -780,6 +786,6 @@ img{
   margin-bottom: 0;
 }
 
-.footer__social-link {
+.footer__social-link{
   display: flex;
 }
