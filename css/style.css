@@ -37,8 +37,26 @@ html {
   font-display: swap;
 }
 
+:root{
+  --title-color: #333333;
+  --text-color: #000000;
+  --light-text-color: #FFFFFF;
+
+  --muted-text-color: #999999;
+  --muted-dark-text-color: #666666;
+
+  --ui-shady-color: #E9E9E9;
+  --ui-accent-color: #CC9933;
+  --ui-accent-hover-color: #F0BF5F;
+  --ui-accent-active-color: #A47312;
+
+  --bg-color: #FFFFFF;
+
+  --font-main: 'Muller', sans-serif;
+}
+
 body{
-  font-family: 'Muller', sans-serif;
+  font-family: var(--font-main);
   font-weight: 400;
   background-color: #F1F1F1;
 }
@@ -69,7 +87,7 @@ img{
   text-indent: 40px;
   font-size: 40px;
   font-weight: 400;
-  color: #333333;
+  color: var(--title-color);
 }
 
 .list-resert{
@@ -82,11 +100,25 @@ img{
   padding: 13px 20px;
   font-size: 16px;
   font-weight: 400;
-  color: #CC9933;
-  border: 1px solid #CC9933;
+  color: var(--ui-accent-color);
+  border: 1px solid var(--ui-accent-color);
   border-radius: 10px;
-  background-color: #FFFFFF;
+  background-color: transparent;
   cursor: pointer;
+
+  transition: color .3s linear, border .3s ease, background-color .3s ease;
+}
+
+.btn:focus,
+.btn:hover {
+  color: var(--light-text-color);
+  background-color: var(--ui-accent-color);
+  border: 1px solid var(--ui-accent-color);
+}
+
+.btn:active{
+  background-color: var(--ui-accent-active-color);
+  border: 1px solid var(--ui-accent-active-color);
 }
 
 /* -----------Header----------- */
@@ -120,16 +152,38 @@ img{
 .header__top-tel{
   font-size: 20px;
   font-weight: 500;
-  color: #666666;
+  color: var(--muted-dark-text-color);
 }
 
 .header__account{
-  padding-left: 29px;
+  display: flex;
+  align-items: center;
   font-size: 16px;
-  color: #CC9933;
-  background-image: url('../img/account-arrow.svg');
-  background-position: left;
-  background-repeat: no-repeat;
+  color: var(--ui-accent-color);
+  transition: color .3s ease-in;
+}
+
+.header__account:focus{
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+}
+
+.header__account:hover .header__account-icon{
+  fill: var(--ui-accent-hover-color);
+}
+
+.header__account:hover{
+  color: var(--ui-accent-hover-color);;
+}
+
+.header__account:active{
+  color: var(--ui-accent-active-color);
+  outline: none;
+}
+
+.header__account-icon{
+  margin-right: 5px;
+  fill: var(--ui-accent-color);
 }
 
 .header__wrapper{
@@ -153,7 +207,7 @@ img{
 
 .header__link{
   font-size: 16px;
-  color: #666666;
+  color: var(--muted-dark-text-color);
 }
 
 .header__item:last-child{
@@ -199,7 +253,7 @@ img{
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,7 +275,8 @@ img{
 }
 
 .offers__list-item--img-rooms{
-  background-image: url('../img/offers__item-3.jpg');
+  background-image: linear-gradient(180deg, rgba(53, 65, 83, 0) 33%, rgba(48, 64, 89, 0.84)),
+    url('../img/offers__item-3.jpg');
 }
 
 .offers__item-title{
@@ -229,7 +284,7 @@ img{
   margin-bottom: 15px;
   font-size: 40px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--light-text-color);
 }
 
 .offers__item-title--big{
@@ -239,7 +294,7 @@ img{
 .offers__item-price{
   margin-bottom: 47px;
   font-size: 20px;
-  color: #FFFFFF;
+  color: var(--light-text-color);
   opacity: 0.8;
 }
 
@@ -250,7 +305,7 @@ img{
 .offers__item-link{
   padding-right: 16px;
   font-size: 16px;
-  color: #F0BF5F;
+  color: var(--ui-accent-hover-color);
   background-image: url('../img/arrow.svg');
   background-position: right;
   background-repeat: no-repeat;
@@ -268,7 +323,7 @@ img{
   max-width: 888px;
   font-size: 16px;
   line-height: 200%;
-  color: #000000;
+  color: var(--text-color);
 }
 
 /* -----------Services Section----------- */
@@ -291,7 +346,7 @@ img{
 
   background-repeat: no-repeat;
   background-position: center top;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
 }
 
@@ -326,7 +381,7 @@ img{
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
-  color: #CC9933;
+  color: var(--ui-accent-color);
   background-image: url('../img/arrow.svg');
   background-position: right;
   background-repeat: no-repeat;
@@ -336,7 +391,7 @@ img{
   margin: 0;
   font-size: 16px;
   line-height: 200%;
-  color: #000000;
+  color: var(--text-color);
 }
 
 /* -----------Advantage Section----------- */
@@ -356,7 +411,7 @@ img{
   padding: 116px 42px 32px 45px;
   max-width: 276px;
   min-height: 276px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
   background-position: top 40px left 45px;
   background-repeat: no-repeat;
@@ -406,7 +461,7 @@ img{
   margin: 0;
   font-size: 16px;
   line-height: 200%;
-  color: #000000;
+  color: var(--text-color);
 }
 
 /* -----------Placement Section----------- */
@@ -453,7 +508,7 @@ img{
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 45px 45px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 0 0 15px 15px;
 }
 
@@ -469,19 +524,19 @@ img{
 .card__price-1{
   margin-right: 4px;
   font-size: 16px;
-  color: #999999;
+  color: var(--muted-text-color);
 }
 
 .card__price-2{
   margin-right: 4px;
   font-size: 20px;
   font-weight: 700;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .card__price-3{
   font-size: 16px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .card__stars{
@@ -501,13 +556,13 @@ img{
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 400;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .card___country{
   margin-bottom: 20px;
   font-size: 16px;
-  color: #999999;
+  color: var(--muted-text-color);
 }
 
 .card__btn{
@@ -515,11 +570,12 @@ img{
 }
 
 .card--link{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: 27px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
   background-image: url('../img/card__link.jpg');
   background-repeat: no-repeat;
@@ -532,10 +588,20 @@ img{
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
-  color: #FFFFFF;
+  color: var(--light-text-color);
   background-image: url('../img/card-arrow.svg');
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.card--link-item::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 /* -----------Form----------- */
@@ -561,7 +627,7 @@ img{
   flex-wrap: wrap;
   align-items: center;
   padding: 31px 28px 30px 28px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
 }
 
@@ -589,7 +655,7 @@ img{
   display: inline-block;
   margin-bottom: 15px;
   font-size: 12px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .tour__form-select{
@@ -607,7 +673,7 @@ img{
   min-width: 120px;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #E9E9E9;
+  border-bottom: 1px solid var(--ui-shady-color);
 }
 
 .tour__form-btn{
@@ -626,7 +692,7 @@ img{
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 45px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-color);
   border-radius: 15px;
 }
 
@@ -648,7 +714,7 @@ img{
   padding-bottom: 23px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #E9E9E9;
+  border-bottom: 1px solid var(--ui-shady-color);
 }
 
 .contacts__list-item:last-child{
@@ -659,7 +725,7 @@ img{
   font-style: normal;
   font-size: 20px;
   font-weight: 700;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .contacts__list-text{
@@ -667,7 +733,7 @@ img{
   font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .contacts__list--width{
@@ -683,14 +749,14 @@ img{
 .contacts__list-roster-link{
   font-size: 16px;
   line-height: 150%;
-  color: #CC9933;
+  color: var(--ui-accent-color);
   font-style: normal;
 }
 
 .contacts__list-roster-span{
   font-size: 16px;
   line-height: 150%;
-  color: #999999;
+  color: var(--muted-text-color);
   font-style: normal;
 }
 
@@ -731,7 +797,7 @@ img{
   margin-bottom: 37px;
   font-size: 16px;
   line-height: 190%;
-  color: #FFFFFF;
+  color: var(--light-text-color);
 }
 
 .footer__info-addition {
@@ -739,13 +805,13 @@ img{
   margin-bottom: 40px;
   font-size: 16px;
   line-height: 190%;
-  color: #FFFFFF;
+  color: var(--light-text-color);
 }
 
 .footer__info-agreement {
   font-size: 16px;
   line-height: 150%;
-  color: #CC9933;
+  color: var(--ui-accent-color);
 }
 
 .footer__contacts {
@@ -759,7 +825,7 @@ img{
   font-size: 16px;
   font-weight: 400;
   line-height: 187%;
-  color: #FFFFFF;
+  color: var(--light-text-color);
 }
 
 .footer__contact{
@@ -775,7 +841,7 @@ img{
 .footer__contact-link{
   font-size: 16px;
   line-height: 150%;
-  color: #CC9933;
+  color: var(--ui-accent-color);
 }
 
 .footer__social{
