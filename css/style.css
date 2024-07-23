@@ -105,11 +105,11 @@ img{
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
-
-  transition: color .3s linear, border .3s ease, background-color .3s ease;
+  outline: none;
+  transition: color .2s linear, border .2s ease, background-color .2s ease;
 }
 
-.btn:focus,
+.btn:focus-visible,
 .btn:hover {
   color: var(--light-text-color);
   background-color: var(--ui-accent-color);
@@ -153,6 +153,21 @@ img{
   font-size: 20px;
   font-weight: 500;
   color: var(--muted-dark-text-color);
+  transition: color .2s ease-in;
+}
+
+.header__top-tel:focus-visible{
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+  color: var(--ui-accent-color);
+}
+
+.header__top-tel:hover{
+  color: var(--ui-accent-color);
+}
+
+.header__top-tel:active{
+  color: var(--ui-accent-active-color);
 }
 
 .header__account{
@@ -160,10 +175,11 @@ img{
   align-items: center;
   font-size: 16px;
   color: var(--ui-accent-color);
-  transition: color .3s ease-in;
+  transition: color .2s ease-in;
+  outline: none;
 }
 
-.header__account:focus{
+.header__account:focus-visible{
   outline: 1px solid var(--ui-accent-color);
   outline-offset: 5px;
 }
@@ -173,17 +189,17 @@ img{
 }
 
 .header__account:hover{
-  color: var(--ui-accent-hover-color);;
+  color: var(--ui-accent-hover-color);
 }
 
 .header__account:active{
   color: var(--ui-accent-active-color);
-  outline: none;
 }
 
 .header__account-icon{
   margin-right: 5px;
   fill: var(--ui-accent-color);
+  transition: fill .2s ease-in;
 }
 
 .header__wrapper{
@@ -208,6 +224,21 @@ img{
 .header__link{
   font-size: 16px;
   color: var(--muted-dark-text-color);
+  transition: color .1s ease-in;
+}
+
+.header__link:focus-visible{
+  color: var(--ui-accent-color);
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+}
+
+.header__link:hover{
+  color: var(--ui-accent-color);
+}
+
+.header__link:active{
+  color: var(--ui-accent-active-color);
 }
 
 .header__item:last-child{
@@ -246,6 +277,7 @@ img{
 }
 
 .offers__list-item{
+  position: relative;
   flex: 1;
   margin-bottom: 24px;
   padding: 40px 108px 40px 45px;
@@ -303,12 +335,45 @@ img{
 }
 
 .offers__item-link{
-  padding-right: 16px;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   color: var(--ui-accent-hover-color);
-  background-image: url('../img/arrow.svg');
-  background-position: right;
-  background-repeat: no-repeat;
+  outline: none;
+  transition: color .2s ease-in;
+}
+
+.offers__item-link-text{
+  margin-right: 5px;
+}
+
+.offers__item-link-icon{
+  transition: transform .2s ease-in;
+}
+
+.offers__item-link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+  transition: opacity .2s ease-in;
+}
+
+.offers__item-link:focus-visible::before{
+  opacity: 1;
+}
+
+.offers__list-item:hover .offers__item-link-icon{
+  transform: translate(15px);
+}
+
+.offers__list-item:active .offers__item-link{
+  color: var(--light-text-color);
 }
 
 /* -----------About Section----------- */
@@ -339,11 +404,11 @@ img{
 }
 
 .services__list-item{
+  position: relative;
   margin: 0 24px 24px 0;
   padding: 191px 126px 35px 45px;
   max-width: 573px;
   min-height: 330px;
-
   background-repeat: no-repeat;
   background-position: center top;
   background-color: var(--bg-color);
@@ -374,17 +439,56 @@ img{
   background-image: url('../img/services__parking.jpg');
 }
 
-.services__list-link{
+.services__list-title{
   margin: 0;
-  display: inline-block;
-  padding-right: 16px;
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
   color: var(--ui-accent-color);
-  background-image: url('../img/arrow.svg');
-  background-position: right;
-  background-repeat: no-repeat;
+}
+
+.services__list-link{
+  display: flex;
+  align-items: center;
+  outline: none;
+  transition: color .2s ease-in;
+}
+
+.services__list-link-text{
+  margin-right: 5px;
+}
+
+.services__list-link-icon{
+  transition: transform .2s ease-in;
+}
+
+.services__list-link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+  transition: opacity .2s ease-in;
+}
+
+.services__list-link:focus-visible::before{
+  opacity: 1;
+}
+
+.services__list-item:hover .services__list-title{
+  color: var(--ui-accent-hover-color);
+}
+
+.services__list-item:hover .services__list-link-icon{
+  transform: translate(15px);
+}
+
+.services__list-item:active .services__list-title{
+  color: var(--ui-accent-active-color);
 }
 
 .services__list-text{
@@ -592,6 +696,7 @@ img{
   background-image: url('../img/card-arrow.svg');
   background-repeat: no-repeat;
   background-position: right;
+  outline: none;
 }
 
 .card--link-item::before{
@@ -601,7 +706,14 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  opacity: 0;
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+  transition: opacity .2s ease-in;
+}
+
+.card--link-item:focus-visible::before{
+  opacity: 1;
 }
 
 /* -----------Form----------- */
@@ -662,6 +774,15 @@ img{
   appearance: none;
   border: none;
   background: url('../img/form__select-arrow.svg') no-repeat right;
+}
+
+.ui-form{
+  outline: none;
+}
+
+.ui-form:focus-visible{
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
 }
 
 .tour__form-calendar{
@@ -744,6 +865,7 @@ img{
 .contacts__list-roster{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .contacts__list-roster-link{
@@ -751,6 +873,23 @@ img{
   line-height: 150%;
   color: var(--ui-accent-color);
   font-style: normal;
+}
+
+.contact-link{
+  transition: color .2s ease-in;
+}
+
+.contact-link:focus-visible{
+  outline: 1px solid var(--ui-accent-color);
+  outline-offset: 5px;
+}
+
+.contact-link:hover{
+  color: var(--ui-accent-hover-color);
+}
+
+.contact-link:active{
+  color: var(--ui-accent-active-color);
 }
 
 .contacts__list-roster-span{
@@ -832,6 +971,7 @@ img{
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer__contact:last-child{
@@ -854,4 +994,18 @@ img{
 
 .footer__social-link{
   display: flex;
+  outline: none;
+}
+
+.footer__social-icon{
+  fill: #999999;
+}
+
+.footer__social-link:focus-visible .footer__social-icon,
+.footer__social-icon:hover {
+  fill: var(--ui-accent-color);
+}
+
+.footer__social-link:active .footer__social-icon{
+  fill: var(--ui-accent-active-color);
 }
